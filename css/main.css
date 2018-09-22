@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 55%;
+  left: 5px;
+  padding: 10px;
+}
+
+nav a {
+  color: #c7c7c7;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: color 0.2s, font-size 0.2s;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  margin: 5px 0;
+}
+
+nav a:hover {
+  color: #d6d6d6;
+  font-size: 2em;
+}
+
+nav a:visited, nav a:active {
+  color: #c7c7c7;;
+}
+
+nav .nav-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 70%;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+section {
+  min-height: 100vh;
+  padding: 30px;
+  text-align: center;
+  overflow: hidden;
+  height: auto;
+}
+
+section.home {
+  background-image: url("../img/logo_transparent_text.png");
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-color: #1a1919;
+}
+
+section.about {
+  background-image: url("../img/clouds_and_peaks.jpg");
+  background-size: cover;
+}
+
+section.brands {
+  background-color: #1a1919;
+  color: #c7c7c7;
+}
+
+.marker {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.big {
+  font-size: 4em;
+}
+
+.medium {
+  font-size: 2em;
+}
+
+.hot {
+  color: hotpink;
+  text-shadow: 2px 2px black;
+}
+
+.brand-grid {
+  margin: 0 200px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-auto-rows: minmax(min-content, max-content);
+  grid-column-gap: 20px;
+}
+
+.brand-logo {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  text-align: initial;
+  display: flex;
+  align-items: center; /* horizontal */
+  justify-content: center; /* vertical */
+}
+
+.brand-logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
