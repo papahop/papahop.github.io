@@ -141,6 +141,7 @@ blockquote {
   padding: 0.5em 10px;
   quotes: "\201C""\201D";
 }
+
 blockquote:before {
   color: rgb(255, 255, 255);
   content: open-quote;
@@ -150,6 +151,14 @@ blockquote:before {
   vertical-align: -0.4em;
   width: 20px;
 }
+
 blockquote p {
   display: inline;
+}
+
+@media only screen and (max-width: 800px) {
+  .about-grid {
+    grid-template-columns: 100%;
+    margin: 0 auto;
+  }
 }
