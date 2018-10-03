@@ -7,17 +7,18 @@ body {
 nav {
   position: fixed;
   top: 0;
-  left: 5px;
-  padding: 10px;
+  left: 0;
+  right: 0;
+  background-color: #4b4b4ba2;
+  padding: 5px 10px;
   z-index: 999;
 }
 
 nav a {
-  color: #e6e6e6;
+  color: white;
   text-decoration: none;
-  font-size: 1.5em;
-  text-shadow: 2px 2px black;
-  transition: color 0.2s, font-size 0.2s;
+  font-size: 1em;
+  transition: font-size 0.1s;
   display: inline-flex;
   align-items: center;
   height: 32px;
@@ -26,13 +27,13 @@ nav a {
   float: left;
 }
 
-nav a:hover {
-  color: #d6d6d6;
-  font-size: 1.7em;
+nav a:visited {
+  color: white;
 }
 
-nav a:visited, nav a:active {
-  color: #c7c7c7;;
+nav a:active, nav a:hover {
+  color: #ffffff;
+  font-size: 1.1em;
 }
 
 nav .nav-text {
@@ -68,8 +69,11 @@ section.about p {
 }
 
 section.brands {
-  background-color: #1a1919;
-  color: #c7c7c7;
+  background-position-y: -220px;
+  background-image: url("../img/sanded_decks.jpg");
+  background-size: cover;
+  color: #1a1919;
+  text-shadow: 2px 2px rgb(255, 255, 255);
 }
 
 section.news {
@@ -94,12 +98,22 @@ section.news {
   text-shadow: 2px 2px black;
 }
 
+.about-grid {
+  margin: 0 10%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-auto-rows: minmax(min-content, max-content);
+  grid-column-gap: 20px;
+}
+
 .brand-grid {
   margin: 0 10%;
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-auto-rows: minmax(min-content, max-content);
   grid-column-gap: 20px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px #4b4b4ba2;
 }
 
 .brand-logo {
@@ -110,6 +124,11 @@ section.news {
   display: flex;
   align-items: center; /* horizontal */
   justify-content: center; /* vertical */
+  overflow: hidden;
+}
+
+.brand-logo:hover img {
+  transform: scale(1.2);
 }
 
 .brand-logo img {
@@ -123,7 +142,7 @@ blockquote {
   quotes: "\201C""\201D";
 }
 blockquote:before {
-  color: #ccc;
+  color: rgb(255, 255, 255);
   content: open-quote;
   font-size: 4em;
   line-height: 0.1em;

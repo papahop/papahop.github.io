@@ -10,8 +10,10 @@ const scrollHandler = function () {
 const smoothScroll = function () {
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function (e) {
-      e.preventDefault()
+      let hash = a.getAttribute('href')
       document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth', block: 'start'  })
+      history.pushState(null, null, hash)
+      e.preventDefault()
     })
   })
 }
