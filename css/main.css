@@ -45,6 +45,7 @@ nav .nav-text {
 }
 
 section {
+  position: relative;
   min-height: 100vh;
   padding: 30px;
   text-align: center;
@@ -54,9 +55,9 @@ section {
 }
 
 section.home {
-  background-image: url("../img/logo_transparent_text.png");
+  background-image: radial-gradient(transparent, #1a1919), url("../img/logo_transparent_text.png");
   background-position: center;
-  background-size: 50%;
+  background-size: 60vw;
   background-repeat: no-repeat;
   background-color: #1a1919;
 }
@@ -66,14 +67,14 @@ section.about {
 }
 
 section.about p {
-  text-shadow: 2px 2px white;
+  text-shadow: 2px 2px white, 2px 2px white;
 }
 
 section.brands {
   background-position-y: -220px;
-  background-image: url("../img/sanded_decks.jpg");
+  background-image: radial-gradient(#0000003c, transparent), url("../img/sanded_decks.jpg");
   color: #1a1919;
-  text-shadow: 2px 2px rgb(255, 255, 255);
+  text-shadow: 2px 2px white, 2px 2px white;
 }
 
 section.news {
@@ -112,7 +113,7 @@ section.news {
   grid-auto-rows: minmax(min-content, max-content);
   grid-column-gap: 20px;
   color: rgb(255, 255, 255);
-  text-shadow: 1px 1px #4b4b4ba2;
+  text-shadow: 1px 1px #4b4b4b;
 }
 
 .brand-logo {
@@ -167,13 +168,21 @@ blockquote p {
 
   section {
     padding: 15px 0;
-    background-position-y: 0 !important;
+    background-size: auto 100%;
+  }
+
+  section.brands {
+    background-position-y: 0;
     background-size: contain;
   }
 
   .brand-grid {
     margin: 0 10px;
     grid-template-columns: 1fr;
+  }
+
+  h1 {
+    margin-top: 10px;
   }
 }
 
