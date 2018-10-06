@@ -22,9 +22,10 @@ nav a {
   display: inline-flex;
   align-items: center;
   height: 32px;
-  width: 100px;
+  max-width: 100px;
   margin: 5px 10px;
   float: left;
+  width: 18%;
 }
 
 nav a:visited {
@@ -49,6 +50,7 @@ section {
   text-align: center;
   overflow: hidden;
   height: auto;
+  background-size: cover;
 }
 
 section.home {
@@ -61,7 +63,6 @@ section.home {
 
 section.about {
   background-image: url("../img/ripping_chute.jpg");
-  background-size: cover;
 }
 
 section.about p {
@@ -71,14 +72,12 @@ section.about p {
 section.brands {
   background-position-y: -220px;
   background-image: url("../img/sanded_decks.jpg");
-  background-size: cover;
   color: #1a1919;
   text-shadow: 2px 2px rgb(255, 255, 255);
 }
 
 section.news {
   background-image: url("../img/skatepark.jpg");
-  background-size: cover;
 }
 
 .marker {
@@ -161,4 +160,34 @@ blockquote p {
     grid-template-columns: 100%;
     margin: 0 auto;
   }
+
+  .big {
+    font-size: 3em;
+  }
+
+  section {
+    padding: 15px 0;
+    background-position-y: 0 !important;
+    background-size: contain;
+  }
+
+  .brand-grid {
+    margin: 0 10px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
