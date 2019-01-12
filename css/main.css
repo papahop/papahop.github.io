@@ -44,6 +44,11 @@ nav .nav-text {
   margin-left: 10px;
 }
 
+nav .social {
+  position: absolute;
+  right: 10px;
+}
+
 section {
   position: relative;
   min-height: 100vh;
@@ -133,7 +138,7 @@ section.news {
 
 .brand-logo img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 90%;
 }
 
 blockquote {
